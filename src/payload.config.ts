@@ -9,6 +9,9 @@ import { buildConfig } from "payload/config";
 import Users from "./collections/Users";
 import { Media } from "./collections/Media";
 import Blogs from "./collections/Blogs";
+import Pages from "./collections/Pages";
+import Header from "./globals/Header";
+import Footer from "./globals/Footer";
 
 export default buildConfig({
   serverURL: process.env.PAYLOAD_PUBLIC_SERVER_URL,
@@ -16,8 +19,9 @@ export default buildConfig({
     user: Users.slug,
     bundler: webpackBundler(),
   },
+  globals: [Header, Footer],
   editor: slateEditor({}),
-  collections: [Users, Media, Blogs],
+  collections: [Users, Media, Pages],
   typescript: {
     outputFile: path.resolve(__dirname, "payload-types.ts"),
   },

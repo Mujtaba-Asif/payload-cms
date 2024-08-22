@@ -1,7 +1,7 @@
 import { slateEditor } from "@payloadcms/richtext-slate";
 import { CollectionConfig, Block } from "payload/types";
 
-const Content: Block = {
+export const Content: Block = {
   slug: "contentBlock",
   fields: [
     {
@@ -59,7 +59,7 @@ const Content: Block = {
   ],
 };
 
-const Media: Block = {
+export const Media: Block = {
   slug: "image",
   fields: [
     {
