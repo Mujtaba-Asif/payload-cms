@@ -3,6 +3,9 @@ import { GlobalConfig } from "payload/types";
 
 const Header: GlobalConfig = {
   slug: "header",
+  access: {
+    read: () => true,
+  },
   fields: [
     {
       type: "array",
