@@ -48,6 +48,9 @@ export const TwoColumns: Block = {
 
 const Pages: CollectionConfig = {
   slug: "pages",
+  access: {
+    read: () => true,
+  },
   fields: [
     {
       type: "row",
