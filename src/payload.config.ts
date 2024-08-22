@@ -11,7 +11,7 @@ import { Media } from "./collections/Media";
 import Blogs from "./collections/Blogs";
 
 export default buildConfig({
-  serverURL: process.env.PAYLOAD_PUBLIC_SERVER_URL || "http://localhost:5000",
+  serverURL: process.env.PAYLOAD_PUBLIC_SERVER_URL,
   admin: {
     user: Users.slug,
     bundler: webpackBundler(),
